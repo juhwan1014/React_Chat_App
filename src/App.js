@@ -16,7 +16,7 @@ function App() {
    if(!isAuth){
 
       return (<div>
-                <Auth />
+                <Auth setIsAuth={setIsAuth} />
              </div>)
              }
 
@@ -24,7 +24,7 @@ function App() {
       return (
        
          <div className="App">
-          {room ? (<div><Chat /></div>) 
+          {room ? (<div><Chat room = {room} /></div>) 
           
           :
           
@@ -35,6 +35,8 @@ function App() {
          
           </div>  )
            }
+
+           
            </div>
   );
     
